@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Projetos Responsivos</title>
+</head>
+<body>
+    <h1>Sorteador de Projetos</h1>
+    <button id="descobrirProfissao">Descobrir Projeto</button>
+    <ol id="profissaoSelecionada"></ol>
+
+    <script>
+ let profissoes = [
+ "Portfólio de Designer Gráfico",
+  "Blog de Viagens com Mapas Interativos",
+  "Plataforma de Cursos Online",
+  "Site de Resenhas de Livros",
+  "Loja Virtual de Produtos Sustentáveis",
+  "Aplicativo de Gerenciamento de Tarefas",
+  "Galeria de Arte Digital",
+  "Portal de Notícias Local",
+  "Site de Receitas com Filtro por Ingredientes",
+  "Plataforma de Crowdfunding para Projetos Sociais",
+  "Aplicativo de Meditação e Bem-Estar",
+  "Ferramenta de Pesquisa de Mercado",
+  "Site de Eventos com Sistema de Inscrição",
+  "Plataforma de Troca de Livros",
+  "Aplicativo de Acompanhamento de Séries e Filmes",
+  "Fórum de Discussão para Desenvolvedores",
+  "Site de Portfólio para Fotógrafos",
+  "Plataforma de Networking Profissional",
+  "Site de Campanhas Ambientais",
+  "Aplicativo de Aprendizado de Idiomas",
+  "Loja Virtual de Artesanato Local",
+  "Site de Dicas de Economia Doméstica",
+  "Plataforma de Podcasts Temáticos",
+  "Site de Tutoriais DIY (Faça Você Mesmo)",
+  "Portal de Voluntariado e Oportunidades",
+  "Galeria Virtual de Jovens Artistas",
+  "Blog de Tecnologia e Inovação",
+  "Aplicativo para Planejamento de Viagens",
+  "Site de Críticas de Cinema",
+  "Plataforma de Aulas de Música Online",
+  "Aplicativo de Controle Financeiro Pessoal",
+  "Blog de Moda e Tendências",
+  "Site de História Local com Tour Virtual",
+  "Loja de Produtos Digitais (e-books, cursos)",
+  "Portal de Empregos e Estágios",
+  "Plataforma de Compartilhamento de Caronas",
+  "Site de Dicas de Sustentabilidade",
+  "Aplicativo de Jogos Educativos para Crianças",
+  "Plataforma de Arte e Cultura Local",
+  "Site de Compartilhamento de Receitas Veganas",
+  "Blog de Fitness e Saúde",
+  "Portal de Conselhos de Carreira para Jovens",
+  "Aplicativo de Guia de Restaurantes Locais",
+  "Site de Tutoriais de Software e Programação",
+  "Loja Virtual de Equipamentos Esportivos",
+  "Plataforma de Doação para Animais Abandonados",
+  "Site de Planejamento de Eventos e Festas",
+  "Aplicativo de Monitoramento de Hábitos",
+  "Blog de Paisagismo e Jardinagem",
+  "Portal de Histórias e Lendas Urbanas",
+  "Plataforma de Troca de Serviços entre Usuários",
+  "Aplicativo de Acompanhamento de Progresso de Leitura",
+  "Site de Reservas para Espaços de Coworking",
+  "Portal de Educação Financeira com Cursos e Ferramentas",
+  "Loja Virtual de Produtos Feitos à Mão por Comunidades Indígenas",
+  "Aplicativo de Reconhecimento de Plantas através de Fotos",
+  "Plataforma de Competições de Código para Programadores",
+  "Site de Orientação Profissional com Testes Interativos",
+  "Portal de História com Linhas do Tempo Interativas",
+  "Aplicativo de Gerenciamento de Clubes de Leitura",
+  "Blog de Críticas e Novidades sobre Jogos Eletrônicos",
+  "Site de Agendamento Online para Clínicas e Consultórios",
+  "Plataforma de Troca e Venda de Itens Colecionáveis",
+  "Aplicativo de Desafios de Sustentabilidade",
+  "Portal de Recursos para Aprendizagem de Programação para Crianças",
+  "Loja Virtual de Produtos Reciclados e Upcycled",
+  "Site de Compartilhamento de Projetos de Ciência Cidadã",
+  "Aplicativo de Monitoramento de Qualidade do Ar Local",
+  "Plataforma de Organização de Grupos de Estudo Online",
+  "Blog de Viagem com Enfoque em Turismo Responsável"
+];
+
+
+        function selecionarProfissaoAleatoria() {
+            let indiceAleatorio = Math.floor(Math.random() * profissoes.length);
+            return profissoes[indiceAleatorio];
+        }
+
+        document.getElementById("descobrirProfissao").addEventListener("click", function() {
+            let profissaoAleatoria = selecionarProfissaoAleatoria();
+            let option = document.createElement("li")
+            option.innerText = `Projeto: ${profissaoAleatoria}` || '-';
+            document.getElementById("profissaoSelecionada").appendChild(option)
+            //document.getElementById("profissaoSelecionada").textContent = `Projeto: ${profissaoAleatoria}`;
+        });
+    </script>
+</body>
+</html>
